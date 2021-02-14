@@ -619,4 +619,20 @@ new Chart(ctx2, {
             });
             chart.update();
         }
-        
+
+
+// the game is below
+
+const game = document.getElementById('sinkOrSwim');
+co
+
+
+
+
+const titleScreen = () => {
+    const text = game.innerHTML = 'test';
+    text.style[fontSize] = '50px'; 
+
+}
+
+titleScreen();

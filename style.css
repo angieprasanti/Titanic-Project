@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -188,14 +188,44 @@ h2 {
     border-bottom: 2px solid black;
 }
 #game {
-    margin: 900px 0px 0px 0px;
-    background-color: greenyellow;
+    margin: 700px 0px 0px 0px;
 }
 
 #sinkOrSwim {
-    height: 40vw;
+    margin: 40px 0px 0px 0px;
+    height: 30vw;
     width: 100%;
-    background-color: yellow;
+    background-image: url('https://wallpaper.dog/large/10771169.jpg');
+    background-position: 30%;
+    background-size: 60%;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    text-align: center;
+    color: #DB222A;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 5px solid #DB222A;
+    background: #BFDBF7;
+    font-size: 20px;
+    font-weight: 400;
+    transition: ease-out 0.7s;
+    outline: none;
+    padding: 10px;
+}
+
+button:hover {
+    box-shadow: inset 200px 0 0 0 yellow;
+    display: inline;
+}
+
+#startButton {
+    position: absolute;
+    left: 480px;
+    top: 100px;
 }
 
 @media (min-width: 1440px){
