@@ -103,7 +103,7 @@
                     <option class="customInput" value="female">Female</option>
                     <option class="customInput" value="male">Male</option>
                 </select>
-                <button id="startButton">Play</button>
+                <button id="startButton" onclick="started()">Start</button>
             </div>
         </div>
 
@@ -112,6 +112,13 @@
     </div>
     
     
+    <audio id="startGameMusic">
+        <source src="./Mastered start game music.mp3" type="audio/mp3"/> 
+    </audio>
+
+    <audio id="titleScreenMusic">
+        <source src="./titanic start game mp3.mp3" type="audio/mp3"/> 
+    </audio>
     <script src="./chartjs.js"></script>
 </body>
 </html>

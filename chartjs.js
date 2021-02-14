@@ -622,17 +622,33 @@ new Chart(ctx2, {
 
 
 // the game is below
-
+const startButton = document.getElementById('startButton');
 const game = document.getElementById('sinkOrSwim');
-co
+const ageInput = document.getElementById('ageInput');
+const sexInput = document.getElementById('sexInput');
+const startGameMusic = document.getElementById('startGameMusic')
+let isStart = false;
 
 
 
 
-const titleScreen = () => {
-    const text = game.innerHTML = 'test';
-    text.style[fontSize] = '50px'; 
-
+const started = () => {
+    if(isStart === false) {
+        ageInput.style.visibility = "visible";
+        sexInput.style.visibility = "visible";
+        startGameMusic.play();
+        isStart = true;
+    } else if (isStart = true){
+        return alert('else')
+    }
+   
 }
 
-titleScreen();
+
+
+//eventHandler
+
+
+
+
+
