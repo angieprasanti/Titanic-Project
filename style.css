@@ -183,32 +183,39 @@ h2 {
 }
 
 .gameLine {
+    margin: 700px 0px 0px 0px;
     border: 0;
     height: 4px;
     border-bottom: 2px solid black;
 }
 #game {
-    margin: 700px 0px 0px 0px;
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
 }
 
 #sinkOrSwim {
-    margin: 40px 0px 0px 0px;
-    height: 30vw;
+    position: relative;
+    margin: 40px auto;
+    height: 450px;
     width: 100%;
     background-image: url('https://wallpaper.dog/large/10771169.jpg');
     background-position: 30%;
-    background-size: 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
+
 
 button {
     font-family: 'Press Start 2P', cursive;
-    position: relative;
+    position: absolute;
     text-align: center;
-    color: #DB222A;
+    color: black;
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 100px;
-    border: 5px solid #DB222A;
+    border: 5px solid grey;
     background: #BFDBF7;
     font-size: 20px;
     font-weight: 400;
@@ -222,14 +229,39 @@ button:hover {
     display: inline;
 }
 
-#startButton {
+.customInput {
+    height: 10%;
+    opacity: 0.6;
+    font-size: 11px;
+    font-family: 'Press Start 2P', cursive;
+    border: 7px solid grey;
+} 
+
+#sexInput {
     position: absolute;
-    left: 480px;
-    top: 100px;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+}
+
+#ageInput {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 20%;
+}
+
+#startButton {
+    box-sizing: inherit;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 45%;
 }
 
 @media (min-width: 1440px){
     .newspaper {
+        position: relative;
         width: 1400px;
         padding: 50px;
         background-color: #ffffffea;
@@ -301,7 +333,7 @@ button:hover {
 
 
   @media (max-width: 900px){
-      
+
     #barCharts {
         display: flex;
         flex-wrap: wrap;
