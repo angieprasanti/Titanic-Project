@@ -13,6 +13,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#thumbnail {
+    width: 5%;
+    padding: 0px 10px 10px 0px;
+}
 
 header {
     position: fixed;
@@ -20,9 +24,10 @@ header {
     left: 0;
     bottom: 5;
     width: 100%;
+    height: 7%;
     display: flex;
     align-items: center;
-    padding: 20px 10%;
+    padding: 10px 10%;
     background-color: #000000;
     opacity: 0.9;
     z-index: 4;
@@ -76,7 +81,7 @@ body {
 .newspaper {
     margin: 100px auto;
     width: 90%;
-    height: 4200px;
+    height: 3500px;
     padding: 50px;
     background-color: #ffffffea;
     box-shadow: 3px 3px 4px 6px #353535;
@@ -226,7 +231,7 @@ button {
 }
 
 button:hover {
-    box-shadow: inset 400px 0 0 0 yellow;
+    box-shadow: inset 400px 0 0 0 #E94F37;
     display: inline;
 }
 
@@ -245,7 +250,7 @@ button:hover {
     height: 4vw;
     margin: 10px auto;
     top: 20%;
-    right: 5%;
+    right: 9%;
     max-height: 60px;
 }
 
@@ -256,7 +261,7 @@ button:hover {
     margin: 10px auto;
     top: 20%;
     height: 4vw;
-    left: 10%;
+    left: 5%;
     max-height: 60px;
 }
 
@@ -273,10 +278,9 @@ button:hover {
 @media (min-width: 1388px) {
 
     .newspaper {
+        max-width: 1200px;
         position: relative;
-        width: 1400px;
         padding: 50px;
-        background-color: #ffffffea;
         box-shadow: 3px 3px 4px 6px #353535;
     }
 
@@ -384,7 +388,20 @@ button:hover {
         width: 25vw;
     } 
     #startButton {
-        left: 40%;
+        left: 35%;
     }
+
+    #sexInput {
+        top: 35%;
+        height: 8vw;
+    }
+    
+    #ageInput {
+        top: 35%;
+        height: 8vw;
+        left: 7%;
+        max-height: 60px;
+    }
+    
 
   }

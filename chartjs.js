@@ -626,10 +626,10 @@ const startButton = document.getElementById('startButton');
 const game = document.getElementById('sinkOrSwim');
 const ageInput = document.getElementById('ageInput');
 const sexInput = document.getElementById('sexInput');
-const startGameMusic = document.getElementById('startGameMusic')
-const titleScreenMusic = document.getElementById('titleScreenMusic')
-const buttonMusic = document.getElementById('buttonMusic')
-let isStart = false
+const startGameMusic = document.getElementById('startGameMusic');
+const titleScreenMusic = document.getElementById('titleScreenMusic');
+const buttonMusic = document.getElementById('buttonMusic');
+let isStart = false;
 
 
 
