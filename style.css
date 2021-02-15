@@ -198,7 +198,7 @@ h2 {
     display: flex;
     position: relative;
     margin: 40px auto;
-    height: 450px;
+    height: 550px;
     width: 100%;
     background-image: url('https://wallpaper.dog/large/10771169.jpg');
     background-position: 30%;
@@ -367,7 +367,7 @@ button:hover {
     }
     
     .nav__links li {
-    display: none;
+         display: none;
 }
     
     #jokes {
@@ -380,6 +380,11 @@ button:hover {
     #secondHeading {
         font-size: auto;
     }
-
+    .customInput {
+        width: 25vw;
+    } 
+    #startButton {
+        left: 40%;
+    }
 
   }
