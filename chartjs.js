@@ -627,7 +627,9 @@ const game = document.getElementById('sinkOrSwim');
 const ageInput = document.getElementById('ageInput');
 const sexInput = document.getElementById('sexInput');
 const startGameMusic = document.getElementById('startGameMusic')
-let isStart = false;
+const titleScreenMusic = document.getElementById('titleScreenMusic')
+const buttonMusic = document.getElementById('buttonMusic')
+let isStart = false
 
 
 
@@ -636,10 +638,16 @@ const started = () => {
     if(isStart === false) {
         ageInput.style.visibility = "visible";
         sexInput.style.visibility = "visible";
-        startGameMusic.play();
+        buttonMusic.play();
+        setTimeout(function() {titleScreenMusic.play();}, 500)
         isStart = true;
     } else if (isStart = true){
-        return alert('else')
+        ageInput.style.display = "none";
+        sexInput.style.display = "none";
+        buttonMusic.play();
+        setTimeout(function() {startGameMusic.play();}, 500)
+        titleScreenMusic.pause();
+
     }
    
 }
