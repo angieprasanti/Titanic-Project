@@ -621,6 +621,50 @@ new Chart(ctx2, {
         }
 
 
+
+
+
+//fake data
+const	age1	=	0.01
+const	age2	=	0.02
+const	age3	=	0.03
+const	age4	=	0.04
+const	age5	=	0.05
+const	age6	=	0.06
+const	age7	=	0.07
+const	age8	=	0.08
+const	age9	=	0.09
+const	age10	=	0.1
+const	age11	=	0.11
+const	age12	=	0.12
+const	age13	=	0.13
+const	age14	=	0.14
+const	age15	=	0.15
+const	age16	=	0.16
+const	age17	=	0.17
+const	age18	=	0.18
+const	age19	=	0.19
+const	age20	=	0.2
+const	age21	=	0.21
+const	age22	=	0.22
+const  femaleAge23	=	0.24
+const	age24	=	0.24
+const	age25	=	0.25
+const	age26	=	0.26
+const	age27	=	0.27
+const	age28	=	0.28
+const	age29	=	0.29
+const	age30	=	0.3
+const	age31	=	0.31
+const	age32	=	0.32
+const	age33	=	0.33
+const	age34	=	0.34
+const	age35	=	0.35
+const	age36	=	0.36
+const	age37	=	0.37
+const	age38	=	0.38
+
+
 // the game is below
 const startButton = document.getElementById('startButton');
 const game = document.getElementById('sinkOrSwim');
@@ -628,13 +672,28 @@ const ageInput = document.getElementById('ageInput');
 const sexInput = document.getElementById('sexInput');
 const startGameMusic = document.getElementById('startGameMusic');
 const titleScreenMusic = document.getElementById('titleScreenMusic');
+let userInputSex = document.getElementById('sexInput');
+let userInputAge = document.getElementById('ageInput');
 const buttonMusic = document.getElementById('buttonMusic');
+var probabilityResult = document.getElementById('probabilityResult');
 let isStart = false;
+let i = 0;
+var value = 'Based on the data that we have.... your survival chance is ';
+
+
+function typeWriter() {
+    if (i < value.length) {
+        probabilityResult.innerHTML += value.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+      }
+    
+}
 
 
 
 
-const started = () => {
+function started() {
     if(isStart === false) {
         ageInput.style.visibility = "visible";
         sexInput.style.visibility = "visible";
@@ -647,7 +706,8 @@ const started = () => {
         buttonMusic.play();
         setTimeout(function() {startGameMusic.play();}, 500)
         titleScreenMusic.pause();
-
+        typeWriter();
+        setTimeout(function() {document.getElementById('result').innerHTML = eval(userInputSex.value + 'Age' + userInputAge.value) + ' <br> <br> Would you like to continue?'},2500)
     }
    
 }
