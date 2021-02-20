@@ -646,8 +646,8 @@ const	age18	=	0.18
 const	age19	=	0.19
 const	age20	=	0.2
 const	age21	=	0.21
-const	age22	=	0.22
-const  femaleAge23	=	0.24
+const	femaleAge22	=	0.22
+const  femaleAge23	=	50
 const	age24	=	0.24
 const	age25	=	0.25
 const	age26	=	0.26
@@ -665,6 +665,7 @@ const	age37	=	0.37
 const	age38	=	0.38
 
 
+
 // the game is below
 const startButton = document.getElementById('startButton');
 const game = document.getElementById('sinkOrSwim');
@@ -678,7 +679,7 @@ const buttonMusic = document.getElementById('buttonMusic');
 var probabilityResult = document.getElementById('probabilityResult');
 let isStart = false;
 let i = 0;
-var value = 'Based on the data that we have.... your survival chance is ';
+var value = 'Based on the data we have received.... your chance of survival is';
 
 
 function typeWriter() {
@@ -692,6 +693,7 @@ function typeWriter() {
 
 
 
+//the button function
 
 function started() {
     if(isStart === false) {
@@ -699,17 +701,45 @@ function started() {
         sexInput.style.visibility = "visible";
         buttonMusic.play();
         setTimeout(function() {titleScreenMusic.play();}, 500)
-        isStart = true;
-    } else if (isStart = true){
+        isStart = 1;
+    } else if (isStart == 1) {
+        buttonMusic.play();
         ageInput.style.display = "none";
         sexInput.style.display = "none";
+        typeWriter();
+        setTimeout(function() {document.getElementById('result').innerHTML = eval(userInputSex.value + 'Age' + userInputAge.value) + '%' + ' <br> <br> Would you like to continue?'},2750)
+        isStart = 2;
+    } else if (isStart == 2) {
         buttonMusic.play();
         setTimeout(function() {startGameMusic.play();}, 500)
         titleScreenMusic.pause();
-        typeWriter();
-        setTimeout(function() {document.getElementById('result').innerHTML = eval(userInputSex.value + 'Age' + userInputAge.value) + ' <br> <br> Would you like to continue?'},2500)
+        startButton.style.visibility = "hidden";
+        document.getElementById('result').style.visibility = "hidden";
+        probabilityResult.style.visibility = "hidden";
+        survivalAction(survivalResult());
+        isStart = 3;
     }
-   
+}
+
+
+
+//the calculation whether user survived or died.
+function survivalResult() {
+  const random = Math.floor(Math.random() * 101)
+  if (random >= 0 && random <= eval(userInputSex.value + 'Age' + userInputAge.value)) {
+    return 'survived'
+  } else {
+    return 'died'
+  }
+}
+
+// the act on whether ship sink or swim
+function survivalAction (value) {
+ if (value == 'survived') {
+     alert('survived')
+ } else if (value == 'died') {
+     alert('died');
+ }
 }
 
 

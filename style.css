@@ -262,11 +262,12 @@ button:hover {
     margin: 10px auto;
     top: 20%;
     height: 4vw;
-    left: 25%;
+    left: 20%;
     max-height: 60px;
 }
 
 #startButton {
+    visibility: visible;
     position: absolute;
     margin: 0px auto;
     top: 50%;
@@ -279,7 +280,7 @@ button:hover {
     color: white;
     top: 22%;
     width: 50%;
-    left: 25%;
+    left: 23%;
     position: absolute;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
@@ -417,7 +418,7 @@ button:hover {
     #ageInput {
         top: 35%;
         height: 8vw;
-        left: 7%;
+        left: 5%;
         max-height: 60px;
     }
         
