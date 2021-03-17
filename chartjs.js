@@ -928,6 +928,7 @@ const SurvivedOrDied = document.getElementById('winOrLose');
 
 
 
+
 function typeWriter() {
     if (i < value.length) {
         probabilityResult.innerHTML += value.charAt(i);
@@ -943,7 +944,7 @@ function typeWriter() {
 
 function started() {
     if (isStart === false) {
-        titanic.style.left = 70 + "%";
+        titanic.style.left = 60 + "%";
         startButton.innerHTML = "Start";
         SurvivedOrDied.innerHTML = "";
         ageInput.style.visibility = "visible";
@@ -1006,17 +1007,16 @@ function survivalAction(value) {
 
 
 function diedAction() {
-    let titanicPosition = 70;
-    let id = setInterval(frame, 160);
+    let titanicPosition = 60;
+    let id = setInterval(frame, 150);
 
     function frame() {
-        if (titanicPosition == 70) {
+        if (titanicPosition == 60) {
             titanicPosition--
             titanic.style.left = titanicPosition + "%";
-        } else if (titanicPosition == 15) {
+        } else if (titanicPosition == 1) {
             clearInterval(id);
             SurvivedOrDied.innerHTML = "You Died!...";
-            playAgainButton.style.visibility = "visible"
         } else {
             titanicPosition--
             titanic.style.left = titanicPosition + "%";
@@ -1025,19 +1025,18 @@ function diedAction() {
 }
 
 function survivedAction() {
-    let titanicPosition = 70;
-    let id = setInterval(frame, 160);
+    let titanicPosition = 60;
+    let id = setInterval(frame, 150);
 
     function frame() {
-        if (titanicPosition == 70) {
+        if (titanicPosition == 60) {
             titanicPosition--
             titanic.style.left = titanicPosition + "%";
-        } else if (titanicPosition == 15) {
+        } else if (titanicPosition == 1) {
             clearInterval(id);
             SurvivedOrDied.innerHTML = "You Survived!...";
-            playAgainButton.style.visibility = "visible"
         } else {
-            titanicPosition--
+            titanicPosition--;
             titanic.style.left = titanicPosition + "%";
         }
     };

@@ -85,11 +85,7 @@ body {
 .newspaper {
     margin: 100px auto;
     width: 90%;
-<<<<<<< HEAD
     height: 4200px;
-=======
-    height: 3600px;
->>>>>>> 716eec4f2741fb3b88a574f587449193569548d9
     padding: 50px;
     background-color: #ffffffea;
     box-shadow: 3px 3px 4px 6px #353535;
@@ -319,16 +315,17 @@ button:hover {
 
 #titanic {
     position: absolute;
-    top: 50%;
-    left: 70%;
-    width: 20%;
+    top: 33%;
+    left: 60%;
+    width: 65%;
 }
 
 #iceBerg {
     position: absolute;
-    top: 50%;
-    width: 16%;
-    left: 15%;
+    top: 49%;
+    width: 40%;
+    left: 0%;
+    clip-path: inset(0% 20% 17% 0%);
 }
 
 
