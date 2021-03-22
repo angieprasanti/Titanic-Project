@@ -925,7 +925,8 @@ var value = 'Based on the data we have received.... your chance of survival is';
 const iceBerg = document.getElementById('iceBerg');
 const titanic = document.getElementById('titanic');
 const SurvivedOrDied = document.getElementById('winOrLose');
-
+const finishMusic = document.getElementById('finishMusic');
+const explosion = document.getElementById('explosion');
 
 
 
@@ -1016,6 +1017,10 @@ function diedAction() {
             titanic.style.left = titanicPosition + "%";
         } else if (titanicPosition == 1) {
             clearInterval(id);
+            finishMusic.play();
+            titanic.style.visibility = "hidden";
+            iceBerg.style.visibility = "hidden";
+            explosion.style.visibility = "visible";
             SurvivedOrDied.innerHTML = "You Died!...";
         } else {
             titanicPosition--
@@ -1034,6 +1039,10 @@ function survivedAction() {
             titanic.style.left = titanicPosition + "%";
         } else if (titanicPosition == 1) {
             clearInterval(id);
+            finishMusic.play();
+            titanic.style.visibility = "hidden";
+            iceBerg.style.visibility = "hidden";
+            explosion.style.visibility = "visible";
             SurvivedOrDied.innerHTML = "You Survived!...";
         } else {
             titanicPosition--;
